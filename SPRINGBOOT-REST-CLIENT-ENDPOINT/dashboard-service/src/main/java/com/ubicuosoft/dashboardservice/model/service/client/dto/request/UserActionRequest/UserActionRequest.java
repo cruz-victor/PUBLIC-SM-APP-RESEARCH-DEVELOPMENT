@@ -1,5 +1,5 @@
 
-package com.ubicuosoft.dashboardservice.model.dto.request.UserActionRequest;
+package com.ubicuosoft.dashboardservice.model.service.client.dto.request.UserActionRequest;
 
 import lombok.Data;
 

@@ -1,11 +1,11 @@
 package com.ubicuosoft.dashboardservice.model.service;
 
-import com.ubicuosoft.dashboardservice.model.dto.request.TutorialRequest.Tutorial;
-import com.ubicuosoft.dashboardservice.model.dto.request.TutorialRequest.TutorialRequest;
-import com.ubicuosoft.dashboardservice.model.dto.request.UserActionRequest.UserActionRequest;
 import com.ubicuosoft.dashboardservice.model.dto.response.DashboardResponse.DashboardResponse;
-import com.ubicuosoft.dashboardservice.model.dto.response.TutorialResponse.TutorialResponse;
 import com.ubicuosoft.dashboardservice.model.service.client.WebClientService;
+import com.ubicuosoft.dashboardservice.model.service.client.dto.request.TutorialRequest.Tutorial;
+import com.ubicuosoft.dashboardservice.model.service.client.dto.request.TutorialRequest.TutorialRequest;
+import com.ubicuosoft.dashboardservice.model.service.client.dto.request.UserActionRequest.UserActionRequest;
+import com.ubicuosoft.dashboardservice.model.service.client.dto.response.TutorialResponse.TutorialResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;

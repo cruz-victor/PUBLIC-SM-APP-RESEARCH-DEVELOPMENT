@@ -1,4 +1,4 @@
-package com.ubicuosoft.dashboardservice.model.dto.response.TutorialResponse;
+package com.ubicuosoft.dashboardservice.model.service.client.dto.response.TutorialResponse;
 
 import lombok.Data;
 
