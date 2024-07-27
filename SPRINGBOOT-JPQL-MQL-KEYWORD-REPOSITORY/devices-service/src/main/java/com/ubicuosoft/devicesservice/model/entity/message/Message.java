@@ -1,13 +1,13 @@
 package com.ubicuosoft.devicesservice.model.entity.message;
 
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@Builder
-//@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 @Document(collection = "messages")
 @ToString
 public class Message {
