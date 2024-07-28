@@ -3,6 +3,7 @@ package com.ubicuosoft.devicesservice.model.entity.message;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,6 +19,7 @@ public class Message {
     private String timestamp;
     private Device device;
     private MessageDetail message;
+    @Field("payload")
     private Payload payload;
     private Communication communication;
 }

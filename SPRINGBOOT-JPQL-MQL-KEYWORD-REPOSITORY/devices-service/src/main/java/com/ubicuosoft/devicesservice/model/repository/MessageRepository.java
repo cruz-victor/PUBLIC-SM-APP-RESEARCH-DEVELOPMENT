@@ -1,6 +1,7 @@
 package com.ubicuosoft.devicesservice.model.repository;
 
 import com.ubicuosoft.devicesservice.model.dto.PaylaodProjection;
+import com.ubicuosoft.devicesservice.model.dto.PayloadWrapper;
 import com.ubicuosoft.devicesservice.model.entity.message.Message;
 import com.ubicuosoft.devicesservice.model.entity.message.Payload;
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -28,6 +29,8 @@ public interface MessageRepository extends MongoRepository<Message, String> {
     List<Message> findByDeviceCodeAndMessageTypeAndMessageChangeTrackingActionUserEmailWhitQuery(String code, String type, String email);
     @Query(value = "{'uuid': ?0}", fields = "{'payload':1, '_id':0}")
     PaylaodProjection findByUuidGetPayload(String uuid);
-    @Query(value="{ 'uuid' : ?0 }", fields="{'payload':1, '_id':0}")
-    Payload findByUuidGetPayloadObject(String uuid);
+    @Query(value="{ 'uuid' : ?0 }", fields = "{'payload':1, '_id':0}")
+    //Spring Data, no sabe como mapear directamente a una subclase del documento, en su lugar intenta recuperar todo el documento
+    //Las soluciones son usar: Projection o Wrapper
+    PayloadWrapper findByUuidGetPayloadObject(String uuid);
 }

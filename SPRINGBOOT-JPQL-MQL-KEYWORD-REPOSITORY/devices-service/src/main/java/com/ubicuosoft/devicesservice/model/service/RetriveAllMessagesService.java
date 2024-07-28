@@ -1,6 +1,7 @@
 package com.ubicuosoft.devicesservice.model.service;
 
 import com.ubicuosoft.devicesservice.model.dto.PaylaodProjection;
+import com.ubicuosoft.devicesservice.model.dto.PayloadWrapper;
 import com.ubicuosoft.devicesservice.model.dto.response.MessageResponse.MessageResponse;
 import com.ubicuosoft.devicesservice.model.entity.message.Message;
 import com.ubicuosoft.devicesservice.model.entity.message.Payload;
@@ -94,9 +95,9 @@ public class RetriveAllMessagesService {
         System.out.println(messages88.getPayload());
 
         System.out.println("99------------------findByUuidGetPayloadObject-----------------");
-        Payload  messages99=messageRepository.findByUuidGetPayloadObject("454fsd4fs5sf212fds45fsd5f02");
+        PayloadWrapper messages99=messageRepository.findByUuidGetPayloadObject("454fsd4fs5sf212fds45fsd5f02");
         System.out.println(messages99);
-        System.out.println(messages99.getDecode());
+        System.out.println(messages99.getPayload().getDecode());
 
         System.out.println("10------------------findPayloadByUuid projection-----------------");
         PaylaodProjection  messages10=messageRepository.findPayloadByUuid("454fsd4fs5sf212fds45fsd5f02");
