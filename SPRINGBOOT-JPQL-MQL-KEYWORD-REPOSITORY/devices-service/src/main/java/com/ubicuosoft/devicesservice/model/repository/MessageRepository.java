@@ -3,7 +3,6 @@ package com.ubicuosoft.devicesservice.model.repository;
 import com.ubicuosoft.devicesservice.model.dto.PaylaodProjection;
 import com.ubicuosoft.devicesservice.model.dto.PayloadWrapper;
 import com.ubicuosoft.devicesservice.model.entity.message.Message;
-import com.ubicuosoft.devicesservice.model.entity.message.Payload;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
